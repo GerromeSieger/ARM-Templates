@@ -1,0 +1,83 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus"
+        },
+        "networkInterfaceName1": {
+            "value": "vm-victor-1503_z1"
+        },
+        "networkSecurityGroupName": {
+            "value": "vm-victor-1-nsg"
+        },
+        "networkSecurityGroupRules": {
+            "value": [
+                {
+                    "name": "SSH",
+                    "properties": {
+                        "priority": 300,
+                        "protocol": "TCP",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "22"
+                    }
+                }
+            ]
+        },
+        "subnetName": {
+            "value": "default"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/b7daae8c-1da4-436b-8d53-f8cf28eef448/resourceGroups/victor-1/providers/Microsoft.Network/virtualNetworks/victor-1-vnet"
+        },
+        "publicIpAddressName1": {
+            "value": "vm-victor-1-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Static"
+        },
+        "publicIpAddressSku": {
+            "value": "Standard"
+        },
+        "pipDeleteOption": {
+            "value": "Delete"
+        },
+        "virtualMachineName": {
+            "value": "vm-victor-1"
+        },
+        "virtualMachineName1": {
+            "value": "vm-victor-1"
+        },
+        "virtualMachineComputerName1": {
+            "value": "vm-victor-1"
+        },
+        "virtualMachineRG": {
+            "value": "victor-1"
+        },
+        "osDiskType": {
+            "value": "StandardSSD_LRS"
+        },
+        "osDiskDeleteOption": {
+            "value": "Delete"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_B1s"
+        },
+        "nicDeleteOption": {
+            "value": "Delete"
+        },
+        "adminUsername": {
+            "value": "victor"
+        },
+        "adminPassword": {
+            "value": "Victorifah6354!"
+        },
+        "zone": {
+            "value": "1"
+        }
+    }
+}

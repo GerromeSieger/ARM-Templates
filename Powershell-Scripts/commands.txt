@@ -1,0 +1,10 @@
+#VMs
+az deployment group create --resource-group victor-1 --template-file C:\Users\victor\Documents\Azure-Resource-Manager\VM\template.json --parameters C:\Users\victor\Documents\Azure-Resource-Manager\VM\parameters.json
+
+az resource delete --resource-group victor-1 --name vm-victor-1 --resource-type "Microsoft.Compute/virtualMachines"
+
+#k8s
+
+az deployment group create --resource-group victor-1 --template-file C:\Users\victor\Documents\Azure-Resource-Manager\AKS\template.json --parameters C:\Users\victor\Documents\Azure-Resource-Manager\AKS\parameters.json
+
+az resource delete --resource-group victor-1 --name k8s-vic-1 --resource-type "Microsoft.ContainerService/managedClusters"
